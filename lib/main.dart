@@ -19,7 +19,7 @@ class HomePage extends StatelessWidget{
       backgroundColor: Colors.red[600],
       ),
       body: Center(
-        child: ElevatedButtonWidget(),
+        child: OutlinedButtonWidget(),
       ),
     );
   }
@@ -31,7 +31,20 @@ class ElevatedButtonWidget extends StatelessWidget{
     return ElevatedButton(onPressed: null, 
     child: Text('ElevatedButton'),
     style: ButtonStyle(
-      backgroundColor: MaterialStateProperty.all(Colors.red[600]),
+      backgroundColor: MaterialStateProperty.all(Colors.blue[600]),
+      foregroundColor: MaterialStateProperty.all(Colors.white),
+    ) 
+    );
+  }
+}
+
+class OutlinedButtonWidget extends StatelessWidget{
+  @override
+  Widget build(BuildContext context){
+    return OutlinedButton(onPressed: null, 
+    child: Text('OutlinedButton'),
+    style: ButtonStyle(
+      backgroundColor: MaterialStateProperty.all(Colors.blue[600]),
       foregroundColor: MaterialStateProperty.all(Colors.white),
     ) 
     );
